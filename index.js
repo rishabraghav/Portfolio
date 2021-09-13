@@ -50,7 +50,13 @@ app.post('/api', (req, res) => {
 
 });
 
+const PORT = process.env.PORT || 3030;
 
-app.listen(3030, '0.0.0.0', (req, res) => {
+if(process.env.NODE_ENV == "production") {
+    app.use(express.static("portfolio/build"));
+}
+
+
+app.listen(PORT, '0.0.0.0', (req, res) => {
     console.log('node server started!');
 });
