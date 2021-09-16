@@ -10,8 +10,7 @@
     "npm-build": "cd portfolio && npm run build",
     "install-client": "cd portfolio && npm install",
     "heroku-postbuild": "npm run install-client && npm run npm-build",
-    "start": "node index.js",
-    "client": "cd portfolio && npm start"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",

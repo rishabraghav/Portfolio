@@ -54,9 +54,14 @@ const PORT = process.env.PORT || 3030;
 
 if(process.env.NODE_ENV == "production") {
     app.use(express.static("portfolio/build"));
+
+    const path = require('path');
+    app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'portfolio', 'build', 'index.html'));
+  });
 }
 
 
-app.listen(PORT, '0.0.0.0', (req, res) => {
+app.listen(PORT, (req, res) => {
     console.log('node server started!');
 });
