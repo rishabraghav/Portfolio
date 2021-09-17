@@ -10,13 +10,7 @@ require('dotenv').config();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public'));
-app.use(express.static("portfolio/build"));
-  
-    const path = require('path');
-    app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html'));
-  });
+
 
 app.get('/api', (req, res) => {
     res.send('API status: Running');
