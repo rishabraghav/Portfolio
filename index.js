@@ -11,7 +11,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-
 app.get('/api', (req, res) => {
     res.send('API status: Running');
     
@@ -52,12 +51,12 @@ app.post('/api', (req, res) => {
 
 const PORT = process.env.PORT || 3030;
 
-if(process.env.NODE_ENV == "production") {
+if(process.env.NODE_ENV === "production") {
     app.use(express.static("portfolio/build"));
-
+  
     const path = require('path');
     app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'portfolio', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html'));
   });
 }
 
