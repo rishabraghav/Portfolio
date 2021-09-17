@@ -54,7 +54,7 @@ const PORT = process.env.PORT || 3030;
 
 if(process.env.NODE_ENV === "production") {
     app.use(express.static("portfolio/build"));
-  
+    app.use(express.static('portfolio/public'));
     const path = require('path');
     app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html'));
