@@ -60,7 +60,7 @@ if(process.env.NODE_ENV === "production") {
     
     const path = require('path');
     app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html'));
+    res.sendFile('index.html');
   });
 }
 
