@@ -12,9 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", function(request, response) {
-    response.sendFile(path.join(__dirname + "/portfolio/build/index.html"));
-  });
+
 app.get('/api', (req, res) => {
     res.send('API status: Running');
     
@@ -60,7 +58,7 @@ if(process.env.NODE_ENV === "production") {
     
     const path = require('path');
     app.get('*', (req, res) => {
-    res.sendFile('index.html');
+    res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html'));
   });
 }
 
