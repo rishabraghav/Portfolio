@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const app = express();
 
@@ -11,7 +12,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-
+app.get("/", function(request, response) {
+    response.sendFile(path.join(__dirname + "/portfolio/build/index.html"));
+  });
 app.get('/api', (req, res) => {
     res.send('API status: Running');
     
