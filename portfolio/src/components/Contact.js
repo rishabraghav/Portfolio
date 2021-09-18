@@ -25,7 +25,7 @@ function Contact() {
 
     const handleSubmit = event => {
         event.preventDefault();
-        axios.post('http://localhost:3030/api', {
+        axios.post('https://rishabhraghav-portfolio.herokuapp.com/api', {
             form
         })
         .then(response => {
