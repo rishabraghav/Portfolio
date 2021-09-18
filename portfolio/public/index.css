@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    font-family: 'Palette Mosaic', cursive;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}   
+
+footer{
+    padding: .25%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:rgb(143, 183, 216);
+    width: 100%;
+    text-align: center;
+    color: white;
+    float: right;
+    
+    
+}
+
+.li{
+    display: flex;
+    margin: 0 40px 0 40px;
+    float: left;
+    padding: 12px;
+    color: gray;
+    
+    
+}
+.li:hover{
+    
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 1px #888888;
+}
+
+.card{
+    width:50rem;
+    height: 40rem;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.name{
+    color: steelblue;
+    text-align: center;
+    font-family: 'Style Script', cursive;
+    font-size: 4rem;
+    isolation: isolate;
+  
+}
+
+hr{
+    width: 70%;
+    border: solid rgb(187, 186, 186) .01px ;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: bolder;
+}
+.aboutme-text{
+    font-size: 30px;
+    line-height: 1.6;
+}
+.icon{
+    background-color: grey;
+}
+img.contactme{
+    height: 25px;
+    margin-right: 15px;
+}
+
+.skillicons{
+
+    padding: 2%;
+    margin-top: 120px;
+}
+.skilltop{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.skillbottom{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img.skillsicon {
+    height: 100px;
+    width: 100px;
+}
+img.india{
+    margin: 0%;
+    margin-left: 2px;
+    position: absolute;
+}
+
+form.contact-form{
+    display: flex;
+   flex-direction: column;
+}
+.contact-textarea{
+    height: 280px !important;
+}
+.contact-button{
+    background-color: rgb(134, 184, 230);
+    isolation: isolate;
+}
+.contact-button:hover{
+    background-color:steelblue;
+    font-weight: bolder !important;
+    color: white;
+}
+.contact-elements{
+    margin: 2%;
+    height: 50px;
+    border: solid black 1px;
+    border-radius: 3px;
+    font-size: large;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+   
+    [class*="card"] {
+      width: 100%;
+    }
+    [class*="aboutme-text"] {
+        font-size: 26px;
+    }
+    [class*="contact-form"] {
+        width: 100%;
+      }
+    [class*="li"] {
+        margin: 0 10px 0 10px;
+    }  
+  }
+  
