@@ -146,7 +146,7 @@ form.contact-form{
       width: 100%;
     }
     [class*="aboutme-text"] {
-        font-size: 26px;
+        font-size: 22px;
     }
     [class*="contact-form"] {
         width: 100%;
@@ -155,4 +155,27 @@ form.contact-form{
         margin: 0 10px 0 10px;
     }  
   }
-  
+  @media only screen and (max-width: 468px) {
+   
+    [class*="card"] {
+      width: 100%;
+      height: inherit;
+    }
+    [class*="name"] {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    [class*="aboutme-text"] {
+        font-size: 22px;
+    }
+    [class*="contact-form"] {
+        width: 100%;
+      }
+    [class*="li"] {
+        margin: 2px;
+        padding: 2px;
+        font-size: 14px;
+    }  
+  }
